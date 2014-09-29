@@ -1,0 +1,5 @@
+[package]
+
+name = "fierro-rs"
+version = "0.0.1"
+authors = ["Pedro Larroy <pedro.larroy@gmail.com>"]
