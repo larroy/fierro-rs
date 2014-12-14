@@ -18,7 +18,7 @@ pub trait Server: Send + Clone {
     }
 
     fn serve(self, host: &str, port: u16) {
-        let mut acceptor = match TcpListener::bind(host, port).listen() {
+        let mut acceptor = match TcpListener::bind((host, port)).listen() {
             Err(err) => {
                 error!("bind to {}:{} failed ({})", host, port, err);
                 return;
